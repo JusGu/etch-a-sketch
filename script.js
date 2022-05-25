@@ -97,6 +97,7 @@ function tool_select(e) {
   e.target.style.boxShadow = "0 0 rgb(69, 69, 69), inset 3px 3px rgb(0, 0, 0, 0.25)";
   cur_tool = e.target;
 }
+tool_select({target:tool1});
 function tool_unselect(){
   
   cur_tool.style.boxShadow = " 3px 3px rgb(69, 69, 69), inset 0px 0px rgb(0, 0, 0)"
