@@ -1,3 +1,6 @@
+if(window.innerHeight > window.innerWidth){
+  alert("Please use Landscape!");
+}
 const container = document.getElementById("container");
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);

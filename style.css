@@ -225,15 +225,11 @@
  }
 
  .footer {
-  position: fixed;
-  left: 0;
-  bottom: 2vh;
-  width: 100%;
+  position: block;
+  margin: 3vh;
   text-align: center;
   font-size: 3vh;
 }
-
-
 
 .footer-text {
   text-decoration: none;
