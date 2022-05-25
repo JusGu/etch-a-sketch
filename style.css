@@ -1,15 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
     --outer-border: 3px;
     --grid-size: 40px;
   }
+  
+  html {
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+  }
   body {
       background-color: #fefae0;
   }
+  h1 {
+    user-select: none;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
   #wrapper {
       height: 70vh;
-      width: 70vw;
+      width: 70vh;
   }
   #container {
     display: grid;
@@ -20,10 +32,11 @@
     border-radius: 2vh;
     background: whitesmoke; /* Grey background */
     box-shadow: 8px 8px rgb(69, 69, 69);
+    cursor: none;
     
   }
   
-  #grid-item {
+  .grid-item {
     outline: 1px solid rgba(0, 0, 0, 0.04);
     text-align: center;
     margin:0.5px;
@@ -32,6 +45,7 @@
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
+    background-color: whitesmoke;
     
   }
 
@@ -63,7 +77,7 @@
   } */
 
   .grid-item:hover {
-      background-color:rgba(0, 0, 0, 0.208);
+    filter: brightness(60%) !important;
   }
 
   .slidecontainer {
@@ -78,7 +92,7 @@
     height: 25px; /* Specified height */
     background: whitesmoke; /* Grey background */
     border: .2rem solid black;
-    box-shadow: 5px 5px rgb(69, 69, 69);
+    box-shadow: inset 2px 2px rgb(69, 69, 69);
     box-sizing: border-box;
     border-radius: 20px;
     transition: all .03s ease;
@@ -86,7 +100,7 @@
 
   .slider:hover {
     transition: all 0.3s ease;
-    box-shadow: 3px 3px rgb(69, 69, 69);
+    box-shadow: inset 4px 4px rgb(69, 69, 69);
   }
 
   .slidecontainer:hover .slider::-webkit-slider-thumb{
@@ -118,3 +132,94 @@
     box-shadow: 3px 3px rgba(0, 0, 0, 0.718);
     cursor: pointer; /* Cursor on hover */
   }
+  .full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  #color-selection, #tool-selection{
+    margin-top: 20vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+  .color, .tool {
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    border: 3px solid black;
+    opacity: 1;
+    box-shadow: 3px 3px rgb(69, 69, 69), inset 0px 0px rgb(192, 158, 7);
+    transition: all .03s ease;
+    cursor: pointer;
+  }
+
+  .color:hover, .tool:hover {
+    box-shadow: 2px 2px rgb(69, 69, 69), inset 0px 0px rgb(192, 158, 7);
+    transition: all ease 0.3s;
+  }
+
+  .tool {
+    background: rgb(255, 208, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img{
+    margin: 10px;
+    width: 6vh;
+    
+    
+    height: 6vh;
+    pointer-events: none
+  }
+  .rainbow-box {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 50%;
+    background: black;
+    border:3px black solid;
+    box-shadow: 3px 3px rgb(69, 69, 69), inset 0px 0px rgb(192, 158, 7);
+    transition: all .03s ease;
+    background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  }
+
+  .rainbow-box:hover {
+    box-shadow: 2px 2px rgb(69, 69, 69), inset 0px 0px rgb(192, 158, 7);
+    transition: all ease 0.3s;
+  }
+
+  .rainbow-box input{
+    opacity: 0;
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    margin-left: -7px;
+    margin-top: -7px;
+    cursor: pointer;
+  }
+
+  #color1{
+    background-color: #EE8CD8;
+  }
+  #color2{
+    background-color: #00F99F;
+  }
+  #color3 {
+    background-color: #00BBF9;
+  }
+
+ #color4 {
+  background-color: #EE8CD8;
+   margin: 0px;
+   width: calc(10vh - 21px);
+   height: calc(10vh - 21px);
+   border: 3px solid black;
+   box-shadow: none;
+   transition: all ease 0.3s;
+   cursor: pointer;
+ }

@@ -8,13 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="container">
-        
+    <div class="full">
+        <div id="tool-selection">
+            <div class="tool" id="tool1">
+                <img id="tool1"src="assets/pen.svg">
+            </div>
+            <div class="tool" id="tool2">
+                <img id ="tool2" src="assets/eraser.svg">
+            </div>
+            <div class="tool"  id="tool3">
+                <img  id ="tool3" src="assets/bucket.svg">
+            </div>
+            <div class="tool"  id="tool4">
+                <img id ="tool4"src="assets/eyedropper.svg">
+            </div>
         </div>
-    </div>
-    <div class="slidecontainer">
-        <input type="range" min="4" max="50" value="20" class="slider" id="myRange">
+        <div class="palette">
+            <h1>
+                Etch-a-Sketch
+            </h1>
+            <div id="wrapper">
+                <div id="container">
+        
+                </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="4" max="50" value="20" class="slider" id="myRange">
+            </div>
+        </div>
+        <div id="color-selection">
+            <div class="color" id="color1"></div>
+            <div class="color" id="color2"></div>
+            <div class="color" id="color3"></div>
+            
+            <div class="rainbow-box">
+                <input type="color" id="color-picker">
+                    <div class="color" id="color4"></div>
+                 </input>
+            </div>
+        </div>
     </div>
 
     
