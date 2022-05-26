@@ -57,7 +57,7 @@
       border-radius: 0 2vh 0 0;
   }
   .bl_corner{
-      border-radius: 0 0 0 2vh 0;
+      border-radius: 0 0 0 2vh;
   }
   .br_corner{
       border-radius: 0 0 2vh 0;
